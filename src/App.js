@@ -1,5 +1,6 @@
 import react, { useState, useEffect } from "react";
-import SimpleCalculator from "./09-simple-calculator/SimpleCalculator";
+import FocusInput from "./10-focus-input/FocusInput";
+// import SimpleCalculator from "./09-simple-calculator/SimpleCalculator";
 // import ScoreKeeper from "./05-score-keeper/ScoreKeeper";
 // import ToggleWindowEvent from "./06-window-event/ToggleWindowEvent";
 // import ColorPicker from "./07-color-picker/ColorPicker";
@@ -13,7 +14,7 @@ import SimpleCalculator from "./09-simple-calculator/SimpleCalculator";
 function App() {
   return (
     <div className='App'>
-      <SimpleCalculator />
+      <FocusInput />
     </div>
   );
 }
