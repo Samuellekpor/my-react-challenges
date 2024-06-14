@@ -37,9 +37,13 @@ function ShoppingCart () {
   }
 
   function decrease(name) {
-    const copyCart = [...cart]
+    let copyCart = [...cart]
     const item = copyCart.find(item => item.name === name)
-    item.quantity -= 1
+    if(item.quantity > 1){
+      item.quantity -= 1
+    }else {
+      copyCart = copyCart.filter(e => e.name !== name)
+    }
     setCart(copyCart)
   }
 
@@ -67,13 +71,13 @@ function ShoppingCart () {
                 {item.quantity}
                 <button onClick={()=> increase(item.name)}>+</button>
               </p>
-              <p>Subtotal: ${item.quantity * item.price}</p>
+              <p>Subtotal: ${(item.quantity * item.price).toFixed(2)}</p>
             </div>
           ))}
         </div>
       </div>
       <div className='total'>
-        <h2>Total: $0.00</h2>
+        <h2>Total: ${cart.reduce((acc, i)=> acc + (i.quantity * i.price), 0).toFixed(2)}</h2>
       </div>
     </div>
   )
