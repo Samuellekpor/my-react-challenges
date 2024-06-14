@@ -29,6 +29,20 @@ function ShoppingCart () {
     return 
   }
 
+  function increase(name){
+    const copyCart = [...cart]
+    const item = copyCart.find(item => item.name === name)
+    item.quantity += 1
+    setCart(copyCart)
+  }
+
+  function decrease(name) {
+    const copyCart = [...cart]
+    const item = copyCart.find(item => item.name === name)
+    item.quantity -= 1
+    setCart(copyCart)
+  }
+
   return (
     <div>
       <h1>Shopping Cart</h1>
@@ -49,9 +63,9 @@ function ShoppingCart () {
             <div key={item.name}>
               <h3>{item.name}</h3>
               <p>
-                <button>-</button>
+                <button onClick={()=> decrease(item.name)}>-</button>
                 {item.quantity}
-                <button>+</button>
+                <button onClick={()=> increase(item.name)}>+</button>
               </p>
               <p>Subtotal: ${item.quantity * item.price}</p>
             </div>
