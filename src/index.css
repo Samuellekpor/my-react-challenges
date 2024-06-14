@@ -55,3 +55,26 @@ input[type=submit] {
   justify-content: center;
   margin-top: 50px;
 }
+
+h1 {
+  text-align: center;
+}
+
+.items {
+  padding-left: 15px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.total {
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  margin:0 5px;
+}

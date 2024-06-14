@@ -1,5 +1,6 @@
 import react, { useState, useEffect } from "react";
-import FocusInput from "./10-focus-input/FocusInput";
+import ShoppingCart from "./11-shopping-cart/ShoppingCart";
+// import FocusInput from "./10-focus-input/FocusInput";
 // import SimpleCalculator from "./09-simple-calculator/SimpleCalculator";
 // import ScoreKeeper from "./05-score-keeper/ScoreKeeper";
 // import ToggleWindowEvent from "./06-window-event/ToggleWindowEvent";
@@ -14,7 +15,7 @@ import FocusInput from "./10-focus-input/FocusInput";
 function App() {
   return (
     <div className='App'>
-      <FocusInput />
+      <ShoppingCart />
     </div>
   );
 }
